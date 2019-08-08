@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 
 @Getter
 @AllArgsConstructor
@@ -16,7 +18,7 @@ public class GoldRatesDto {
     //private Long id;
 
     @JsonProperty("data")
-    private String date;
+    private LocalDate date;
 
     @JsonProperty("cena")
     private double rate;

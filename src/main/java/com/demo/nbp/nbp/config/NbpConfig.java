@@ -1,4 +1,4 @@
-package com.demo.nbp.nbp;
+package com.demo.nbp.nbp.config;
 
 import lombok.Getter;
 import org.springframework.stereotype.Component;
