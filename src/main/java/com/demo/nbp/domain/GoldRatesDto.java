@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 
@@ -15,7 +18,6 @@ import java.time.LocalDate;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class GoldRatesDto {
 
-    //private Long id;
 
     @JsonProperty("data")
     private LocalDate date;

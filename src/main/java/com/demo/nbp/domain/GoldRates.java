@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 
 
 @Getter
@@ -18,13 +19,9 @@ import javax.validation.constraints.NotNull;
 public class GoldRates {
 
     @Id
-    @GeneratedValue
     @NotNull
-    @Column(name = "ID")
-    private Long id;
-
-    @Column(name = "DATE")
-    private String date;
+    @Column(name = "DATE", unique = true)
+    private LocalDate date;
 
     @Column(name = "RATE")
     private double rate;
