@@ -22,8 +22,6 @@ public class NbpClient {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(NbpClient.class);
 
-
-
     @Autowired
     NbpConfig nbpConfig;
 

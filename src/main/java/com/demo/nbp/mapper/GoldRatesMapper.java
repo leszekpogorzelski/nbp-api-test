@@ -10,8 +10,11 @@ import org.springframework.stereotype.Component;
 public class GoldRatesMapper {
 
 
+    public GoldRates mapToGoldRates(final GoldRatesDto goldRatesDto) {
+        return new GoldRates(goldRatesDto.getDate(), goldRatesDto.getRate());
+    }
 
-public GoldRates mapToGoldRates(final GoldRatesDto goldRatesDto){
-    return new GoldRates(goldRatesDto.getDate(), goldRatesDto.getRate());
-}
+    public GoldRatesDto mapToGoldRatesDto(final GoldRates goldRates) {
+        return new GoldRatesDto(goldRates.getDate(), goldRates.getRate());
+    }
 }

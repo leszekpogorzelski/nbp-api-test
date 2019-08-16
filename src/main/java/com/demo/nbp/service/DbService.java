@@ -5,6 +5,8 @@ import com.demo.nbp.repository.GoldRatesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DbService {
 
@@ -13,6 +15,13 @@ public class DbService {
 
     public GoldRates saveRate(final GoldRates goldRates) {
         return goldRatesRepository.save(goldRates);
+    }
 
+    public long countRates(){
+        return goldRatesRepository.count();
+    }
+
+    public List<GoldRates> allRates() {
+        return goldRatesRepository.findAll();
     }
 }
